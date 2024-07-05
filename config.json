@@ -1,0 +1,37 @@
+{
+    "DESIGN_NAME": "cpu",
+    "VERILOG_FILES": "dir::src/*.v",
+    "CLOCK_PORT": "clk",
+    "CLOCK_PERIOD": 10.0,
+    "PNR_SDC_FILE": "/home/yash/OpenLane/scripts/base.sdc",
+    "SIGNOFF_SDC_FILE": "/home/yash/OpenLane/scripts/base.sdc",
+    "//": "PDN",
+    "FP_PDN_VOFFSET": 5,
+    "FP_PDN_HOFFSET": 5,
+    "FP_PDN_VWIDTH": 2,
+    "FP_PDN_HWIDTH": 2,
+    "FP_PDN_VPITCH": 30,
+    "FP_PDN_HPITCH": 30,
+    "FP_PDN_SKIPTRIM": true,
+    "FP_PDN_CORE_RING":1,
+    "LEC_ENABLE":1,
+    "FP_SIZING":"absolute",
+    "CORE_AREA": "5 5 90 90",
+    "DIE_AREA": "0.0 0.0 100 100",
+    "FP_PDN_MULTILAYER": true,
+    "ROUTING_CORES":4,
+    "RUN_TAP_DECAP_INSERTION":true,
+    "//": "Technology-Specific Configs",    
+    "pdk::sky130*": {
+        "FP_CORE_UTIL": 45,
+        "CLOCK_PERIOD": 10,
+        "scl::sky130_fd_sc_hd": {
+            "CLOCK_PERIOD": 8
+        },
+        "scl::sky130_fd_sc_ls": {
+            "MAX_FANOUT_CONSTRAINT": 5
+        }
+    }
+}
+
+
